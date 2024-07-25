@@ -8,14 +8,16 @@
 </head>
 
 <body>
+	<h4>
+		<a href="/lesson-2/index.html">На попередню сторінку</a>
+	</h4>
 	<h1>Задача №0.</h1>
 	<h3>Обчислити значення виразів</h3>
 	<img src="./img/task0.png" alt="task0">
-
 	<script>
-		let a = parseInt(prompt('a', ''));
-		let b = parseInt(prompt('b', ''));
-		let c = parseInt(prompt('c', ''));
+		let a = parseInt(prompt('a', '2'));
+		let b = parseInt(prompt('b', '3'));
+		let c = parseInt(prompt('c', '4'));
 
 		let s1 = a + 12 + b;
 		let s2 = Math.sqrt((a + b) / (2 * a));
@@ -24,13 +26,13 @@
 
 		document.write(`
 		<br>
-		S1 = ${s1} 
+		S1 = ${s1.toFixed(3)} 
 		<br>
-		S2 = ${s2}
+		S2 = ${s2.toFixed(3)}
 		<br>
-		S3 = ${s3}
+		S3 = ${s3.toFixed(3)}
 		<br>
-		S4 =${s4.toFixed(4)}
+		S4 = ${s4.toFixed(3)}
 		`)
 	</script>
 </body>
