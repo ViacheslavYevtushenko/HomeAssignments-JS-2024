@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача №1.</h1>
+	<h3>Знайти суму, добуток та частку двох дійсних чисел. Результат вивести у формі таблиці</h3>
+
+	<script>
+		let a = parseInt(prompt("Перше число", "2"));
+		let b = parseInt(prompt("Друге число", "3"));
+
+		let augTwoNumbers = a + b;
+		let multiTwoNumbers = a * b;
+		let divTwoNumbers = a / b;
+		document.write(`
+		<table border ="2px">
+			<tr>
+				<th>Шуканий результат</th>
+				<th>Отримане значення</th>
+			</tr>
+			<tr>
+				<th>Сума</th>
+				<th>${augTwoNumbers}</th>
+			</tr>
+			<tr>
+				<th>Добуток</th>
+				<th>${multiTwoNumbers}</th>
+			</tr>
+			<tr>
+				<th>Частка</th>
+				<th>${divTwoNumbers.toFixed(3)}</th>
+			</tr>
+		</table>
+`)
+	</script>
+</body>
+
+</html>

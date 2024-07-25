@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача №5.</h1>
+	<h3>Дано кількість секунд, що пройшла від початку доби. Визначити скільки це годин і хвилин.</h3>
+
+	<script>
+		//Кількість секунд у добі
+		let secondsInDay = 86400;
+		//Кількість секунд у годині
+		let secondsHour = 3600;
+		//Кількість секунд у хвилині
+		let secondsMinute = 60;
+
+		//Рішення
+		let hours = secondsInDay / secondsHour;
+		let minutes = secondsInDay / secondsMinute;
+
+		//Результат
+		document.write(`
+		Кількість секунд у добі: 86400
+		<br>
+		Годин у секундах: ${hours}
+		<br>
+		Хвилин у секундах: ${minutes}
+		`)
+	</script>
+</body>
+
+</html>

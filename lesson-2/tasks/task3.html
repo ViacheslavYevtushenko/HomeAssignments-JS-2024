@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача №3.</h1>
+	<h3> Дано вартість одиниці товару і кількість. Знайти загальну вартість та ПДВ (5% від загальної вартості).</h3>
+	<script>
+		//Данні по ціні, кількості товару та 5% ПДВ
+		let priceItem = parseFloat(prompt('Ціна: ', '44.30'))
+		let numberOfItems = parseInt(prompt('Кількість: ', '2'))
+		let vat = 5
+		// Рішення
+		//Загальна ціна
+		let totalPrice = priceItem * numberOfItems;
+		//ПДВ від загальної вартості
+		let vatTotalPrise = totalPrice * (vat / 100);
+		//Загальна ціна з ПДВ
+		let totalPriceWithVAT = totalPrice + vatTotalPrise;
+		document.write(`
+		Загальна ціна: ${totalPrice}
+		<br>
+		ПДВ від загальної вартості: ${vatTotalPrise}
+		<br>
+		Загальна ціна з ПДВ: ${totalPriceWithVAT}
+		`);
+	</script>
+</body>
+
+</html>

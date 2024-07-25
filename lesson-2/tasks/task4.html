@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача №4.</h1>
+	<h3>Дано довжину у сантиметрах. Визначати скільки це метрів і кілометрів</h3>
+
+	<script>
+		//Задаємо довжину сантиметрів
+		let lengthCentimeter = parseInt(prompt('Довжина в сантиметрах', '50'));
+
+		//Сантиметр в метрі та кілометрі
+		let centimeterInMeter = 100;
+		let centimeterInKilometr = 100000;
+
+		//Рішення
+		const lengthMeter = lengthCentimeter / centimeterInMeter;
+		const lengthKilometer = lengthCentimeter / centimeterInKilometr;
+
+		//Результат
+		document.write(`
+		Кількість метрів: ${lengthMeter},
+		<br>
+		Кількість кілометрів: ${lengthKilometer}
+		`);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача №7.</h1>
+	<h3>Знайти суму випадкового номера місяця (від 1 до 12) та випадкового номера дня (від 0 до 6).</h3>
+
+	<script>
+		//Місяці
+		let numberMonths = 12;
+		let numberDay = 7;
+		/*
+		Дні з 0 до 6
+		Поставив 7, бо 7-мий день не включає, Math.floor - враховує  0.
+		*/
+		document.write(`
+	Місяць - ${Math.ceil(Math.random() * numberMonths)}
+	<br>
+	День - ${Math.floor(Math.random() * numberDay)}
+		`)
+	</script>
+</body>
+
+</html>

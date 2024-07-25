@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>Задача №6.</h1>
+	<h3>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо
+		та загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</h3>
+
+	<script>
+		//Кількість та ціна
+		let chips = parseInt(prompt('Чіпси, кількість', '2'))
+		let chipsPrice = parseFloat(prompt('Вартість товару', '55.49'))
+
+		let pepsi = parseInt(prompt('Pepsi 1л, кількість', '3'))
+		let pepsiPrice = parseFloat(prompt('Вартість товару', '49.50'))
+
+		let nuts = parseInt(prompt('Горішки, кількість', '2'))
+		let nutsPrice = parseFloat(prompt('Вартість товару', '19.95'))
+
+		//Ціни по кількості товару
+		let totalPriceChips = chips * chipsPrice;
+		let totalPricePepsi = pepsi * pepsiPrice;
+		let totalPriceNuts = nuts * nutsPrice;
+		//Загальна вартість
+		let totalPrice = totalPriceChips + totalPricePepsi + totalPriceNuts;
+		document.write(`
+		<table border="2px">
+		<tr>
+			<th>Товар</th>
+			<th>Ціна</th>
+			<th>Кількість</th>
+			<th>Загальна ціна</th>
+		</tr>
+		<tr>
+			<th>Чіпси</th>
+			<th>${chipsPrice}</th>
+			<th>${chips}</th>
+			<th>${totalPriceChips}</th>
+		</tr>
+		<tr>
+			<th>Pepsi 1л</th>
+			<th>${pepsiPrice}</th>
+			<th>${pepsi}</th>
+			<th>${totalPricePepsi}</th>
+		</tr>
+		<tr>
+			<th>Горішки</th>
+			<th>${nutsPrice}</th>
+			<th>${nuts}</th>
+			<th>${totalPriceNuts.toFixed(2)}</th>
+		</tr>
+	</table>
+	<br>
+	<table border="2px">
+		<tr>
+			<th>Всього: ${totalPrice}</th>
+		</tr>
+	</table>
+		`)
+	</script>
+</body>
+
+</html>
