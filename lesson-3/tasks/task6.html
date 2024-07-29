@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 6.</title>
+</head>
+
+<body>
+	<h1>Задача №6.</h1>
+	<h3>З клавіатури вводиться номер дня тижня. Вивести на екран назву дня.</h3>
+	<script>
+		//Крок 0. Позначення велечин
+		// numberWeek - ввести номер дня тижня
+		// monday - 1 (понеділок)
+		// tuesday - 2 (вівторок)
+		// wednesday - 3 (середа)
+		// thursday - 4 (четвер)
+		// friday - 5 (пятниця)
+		// saturday - 6 (суббота)
+		// sunday - 7 (неділя)
+		//Крок 1. Введення величин
+		let numberWeek = parseInt(prompt('Введіть номер дня тижня, від 1 до 7', ''))
+		const monday = 1
+		const tuesday = 2
+		const wednesday = 3
+		const thursday = 4
+		const friday = 5
+		const saturday = 6
+		const sunday = 7
+		//Крок 2.Обчислення
+		if (numberWeek === monday) {
+			alert('Понеділок')
+			document.write(`Понеділок`)
+		}
+		else if (numberWeek === tuesday) {
+			alert('Вівторок')
+			document.write(`Вівторок`)
+		}
+		else if (numberWeek === wednesday) {
+			alert('Середа')
+			document.write(`Середа`)
+		}
+		else if (numberWeek === thursday) {
+			alert('Четвер')
+			document.write(`Четвер`)
+		}
+		else if (numberWeek === friday) {
+			alert('Пятниця')
+			document.write(`Пятниця`)
+		}
+		else if (numberWeek === saturday) {
+			alert('Суббота')
+			document.write(`Суббота`)
+		}
+		else if (numberWeek === sunday) {
+			alert('Неділя')
+			document.write(`Неділя`)
+		}
+		else {
+			alert('Не вірно')
+			document.write(`Не вірно`)
+		}
+	</script>
+</body>
+
+</html>

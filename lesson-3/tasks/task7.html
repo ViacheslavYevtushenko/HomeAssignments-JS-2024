@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 7.</title>
+</head>
+
+<body>
+	<h1>Задача №7.</h1>
+	<h3>З клавіатури вводиться номер місяця. Вивести до якої пори він відноситься</h3>
+	<script>
+		//Крок 0. Позначення величин
+		// january - Січень
+		// february - Лютий
+		// march - Березень
+		// april - Квітень
+		// may - Травень
+		// june - Червень
+		// july - Липень
+		// august - Серпень
+		// september - Вересень
+		// october - Жовтень
+		// november - Листопад
+		// december - Грудень
+
+
+		//Крок 1. Введення величин
+		let numberMonth = parseInt(prompt('Введіть номер місяця', ''))
+		const january = 1
+		const february = 2
+		const march = 3
+		const april = 4
+		const may = 5
+		const june = 6
+		const july = 7
+		const august = 8
+		const september = 9
+		const october = 10
+		const november = 11
+		const december = 12
+
+		//Крок 2. Обчислення
+
+		//------------------ПЕРШИЙ ВАРІАНТ--------------------------
+		if (numberMonth === december || numberMonth === january || numberMonth === february) {
+			alert('Зима')
+			document.write(`Зима`)
+		}
+		else if (numberMonth === march || numberMonth === april || numberMonth === may) {
+			alert('Весна')
+			document.write(`Весна`)
+		}
+		else if (numberMonth === june || numberMonth === july || numberMonth === august) {
+			alert('Літо')
+			document.write(`Літо`)
+		}
+		else if (numberMonth === september || numberMonth === october || numberMonth === november) {
+			alert('Осінь')
+			document.write(`Осінь`)
+		}
+		else {
+			alert('Немає такого')
+			document.write(`Немає такого`)
+		}
+
+
+		//------------------ДРУГИЙ ВАРІАНТ--------------------------
+		// if (numberMonth === january) {
+		// 	alert('Зима')
+		// 	document.write(`Зима`)
+		// }
+		// else if (numberMonth === february) {
+		// 	alert('Зима')
+		// 	document.write(`Зима`)
+		// }
+		// else if (numberMonth === march) {
+		// 	alert('Весна')
+		// 	document.write(`Весна`)
+		// }
+		// else if (numberMonth === april) {
+		// 	alert('Весна')
+		// 	document.write(`Весна`)
+		// }
+		// else if (numberMonth === may) {
+		// 	alert('Весна')
+		// 	document.write(`Весна`)
+		// }
+		// else if (numberMonth === june) {
+		// 	alert('Літо')
+		// 	document.write(`Літо`)
+		// }
+		// else if (numberMonth === july) {
+		// 	alert('Літо')
+		// 	document.write(`Літо`)
+		// }
+		// else if (numberMonth === august) {
+		// 	alert('Літо')
+		// 	document.write(`Літо`)
+		// }
+		// else if (numberMonth === september) {
+		// 	alert('Осінь')
+		// 	document.write(`Осінь`)
+		// }
+		// else if (numberMonth === october) {
+		// 	alert('Осінь')
+		// 	document.write(`Осінь`)
+		// }
+		// else if (numberMonth === november) {
+		// 	alert('Осінь')
+		// 	document.write(`Осінь`)
+		// }
+		// else if (numberMonth === december) {
+		// 	alert('Зима')
+		// 	document.write(`Зима`)
+		// }
+		// else {
+		// 	alert('Немає такого')
+		// 	document.write(`Немає такого`)
+		// }
+
+
+	</script>
+</body>
+
+</html>

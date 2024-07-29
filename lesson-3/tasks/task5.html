@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 5.</title>
+</head>
+
+<body>
+	<h1>Задача №5.</h1>
+	<h3>З клавіатури вводиться назва категорії водія (А-мотоцикл, В-легковий автомобіль, С-вантажний автомобіль). Вивести
+		на екран назву транспортного засобу, яким він може керувати.</h3>
+
+	<script>
+		//Крок 0. Позначення велечин
+		// categoryDriver - введення данних категорії водія
+		// Категорії:
+		// categoryA - мотоцикл
+		// categoryB - легковий автомобіль
+		// categoryC - вантажний автомобіль
+
+		//Крок 1. Введення величин
+		let categoryDriver = prompt('Введіть одну з цих категорій - A, B, C', '')
+		const categoryA = "A"
+		const categoryB = "B"
+		const categoryC = "C"
+
+		//Крок 2.Обчислення
+		if (categoryDriver === categoryA)
+			alert('Мотоцикли "Harley-Davidson"')
+		else if (categoryDriver === categoryB)
+			alert('Легковий автомобіль "Mitsubishi"')
+		else if (categoryDriver === categoryC)
+			alert('Вантажний "Scania"')
+		else {
+			alert('Помилка!')
+			alert('Введіть англійською та великою літерою')
+		}
+	</script>
+</body>
+
+</html>

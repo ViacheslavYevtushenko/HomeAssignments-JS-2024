@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 4.</title>
+</head>
+
+<body>
+	<h1>Задача №4.</h1>
+	<h3>З клавіатури вводиться вік людини. Вивести на екран ким він є (дитиною у садочку, школярем, студентом,
+		працівником, пенсіонером).</h3>
+
+	<script>
+		//Крок 0. Позначення велечин
+		/*
+		
+		humanAge - вік людини
+		baby - немовля
+		chіldren - дитина у садочку
+		schoolboy - школяр
+		student - студент
+		workman - працівник
+		pensioner - пенсіонер
+		*/
+		//Крок 1. Введення величин
+		let humanAge = parseInt(prompt('Ваш вік', '18'))
+		const baby = 3
+		const children = 5;
+		const schoolboy = 16;
+		const student = 21;
+		const workman = 59;
+		const pensioner = 60;
+
+		//Крок 2.Обчислення
+		//----------------------Перший Варіант----------------------
+		if (humanAge <= baby)
+			alert('Ну зовсім немовля');
+
+		else if (humanAge <= children)
+			alert('Ви дитина з садочку');
+
+		else if (humanAge <= schoolboy)
+			alert('Ви школяр');
+
+		else if (humanAge <= student)
+			alert('Ви студент');
+
+		else if (humanAge <= workman)
+			alert('Ви працівник');
+
+		else if (humanAge >= pensioner)
+			alert('Ви пенсіонер');
+
+		//----------------------Другий Варіант----------------------
+		// if (humanAge <= baby)
+		// 	alert('Ну зовсім немовля');
+
+		// else if (humanAge >= baby && humanAge <= children)
+		// 	alert('Ви дитина з садочку');
+		// else if (humanAge >= children && humanAge <= schoolboy)
+		// 	alert('Ви школяр');
+		// else if (humanAge >= schoolboy && humanAge <= student)
+		// 	alert('Ви студент');
+		// else if (humanAge >= student && humanAge <= workman)
+		// 	alert('Ви працівник');
+		// else if (humanAge >= pensioner)
+		// 	alert('Ви пенсіонер');
+	</script>
+</body>
+
+</html>
