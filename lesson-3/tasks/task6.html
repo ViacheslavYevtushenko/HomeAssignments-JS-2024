@@ -23,39 +23,40 @@
 		// sunday - 7 (неділя)
 		//Крок 1. Введення величин
 		let numberWeek = parseInt(prompt('Введіть номер дня тижня, від 1 до 7', ''))
-		const monday = 1
-		const tuesday = 2
-		const wednesday = 3
-		const thursday = 4
-		const friday = 5
-		const saturday = 6
-		const sunday = 7
+		const mondayNumber = 1
+		const tuesdayNumber = 2
+		const wednesdayNumber = 3
+		const thursdayNumber = 4
+		const fridayNumber = 5
+		const saturdayNumber = 6
+		const sundayNumber = 7
 		//Крок 2.Обчислення
-		if (numberWeek === monday) {
+		/*
+		if (numberWeek === mondayNumber) {
 			alert('Понеділок')
 			document.write(`Понеділок`)
 		}
-		else if (numberWeek === tuesday) {
+		else if (numberWeek === tuesdayNumber) {
 			alert('Вівторок')
 			document.write(`Вівторок`)
 		}
-		else if (numberWeek === wednesday) {
+		else if (numberWeek === wednesdayNumber) {
 			alert('Середа')
 			document.write(`Середа`)
 		}
-		else if (numberWeek === thursday) {
+		else if (numberWeek === thursdayNumber) {
 			alert('Четвер')
 			document.write(`Четвер`)
 		}
-		else if (numberWeek === friday) {
+		else if (numberWeek === fridayNumber) {
 			alert('Пятниця')
 			document.write(`Пятниця`)
 		}
-		else if (numberWeek === saturday) {
+		else if (numberWeek === saturdayNumber) {
 			alert('Суббота')
 			document.write(`Суббота`)
 		}
-		else if (numberWeek === sunday) {
+		else if (numberWeek === sundayNumber) {
 			alert('Неділя')
 			document.write(`Неділя`)
 		}
@@ -63,6 +64,38 @@
 			alert('Не вірно')
 			document.write(`Не вірно`)
 		}
+		*/
+		//--------------------Варіант switch
+		let result;
+
+		switch (numberWeek) {
+			case mondayNumber:
+				result = "Понеділок"
+				break;
+			case tuesdayNumber:
+				result = "Вівторок"
+				break;
+			case wednesdayNumber:
+				result = "Середа"
+				break;
+			case thursdayNumber:
+				result = "Четвер"
+				break;
+			case fridayNumber:
+				result = "Пятниця"
+				break;
+			case saturdayNumber:
+				result = "Суббота"
+				break;
+			case sundayNumber:
+				result = "Неділя"
+				break;
+			default:
+				result = "Не вірно"
+				break;
+		}
+		alert(`${result}`)
+		document.write(`${result}`)
 	</script>
 </body>
 

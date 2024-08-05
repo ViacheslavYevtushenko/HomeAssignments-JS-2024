@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 5.</title>
+</head>
+
+<body>
+	<h1>Задача №5.</h1>
+	<h3>Вивести таблицю</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<div><img src="./img/5.png" alt=""></div>
+
+	<script>
+		//Крок 0. Позначення величин
+		//Крок 1. Введення величин
+		//Крок 2. Обчислення
+		document.write(`<table border="2">`)
+		document.write(`<tr>`)
+		for (let j = 1; j <= 3; j++) {
+			document.write(`<th>${j}</th>`)
+		}
+		document.write(`</tr>`)
+		document.write(`<tr>`)
+		for (let r = 4; r <= 6; r++) {
+			document.write(`<th>${r}</th>`)
+		}
+		document.write(`</tr>`)
+		document.write(`<tr>`)
+		for (let q = 7; q <= 9; q++) {
+			document.write(`<th>${q}</th>`)
+		}
+		document.write(`</tr>`)
+		document.write(`</table>`)
+	</script>
+</body>
+
+</html>

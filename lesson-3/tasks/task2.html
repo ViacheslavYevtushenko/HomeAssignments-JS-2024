@@ -24,13 +24,14 @@
 		let amountMoney = parseFloat(prompt('Кількість у вас грошей', ''))
 		let restMoney = amountMoney - priceProduct
 		const lotteryTicket = 4
-		let restAfterTicket = restMoney - lotteryTicket
+
 		// Крок 2. Обчислення
 		if (priceProduct > amountMoney)
 			alert('Не достатньо грошей!')
 		else if (priceProduct === amountMoney)
 			alert('Тримайте, гарного вам дня!')
 		else if (priceProduct < amountMoney) {
+			let restAfterTicket = restMoney - lotteryTicket
 			alert(`Тримайте! Ось ваша решта ${restMoney.toFixed(2)}`)
 			if (restMoney > lotteryTicket) {
 				alert('Будете брати лоторейний квиток?')

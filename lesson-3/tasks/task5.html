@@ -27,6 +27,7 @@
 		const categoryC = "C"
 
 		//Крок 2.Обчислення
+		/*
 		if (categoryDriver === categoryA)
 			alert('Мотоцикли "Harley-Davidson"')
 		else if (categoryDriver === categoryB)
@@ -37,6 +38,26 @@
 			alert('Помилка!')
 			alert('Введіть англійською та великою літерою')
 		}
+		*/
+		//--------------------Варіант switch
+		let result;
+
+		switch (categoryDriver.toLocaleUpperCase()) {
+			case categoryA:
+				result = 'Мотоцикли "Harley-Davidson"';
+				break;
+			case categoryB:
+				result = 'Легковий автомобіль "Mitsubishi"';
+				break;
+			case categoryC:
+				result = 'Вантажний "Scania"';
+				break;
+
+			default:
+				result = "Помилка!";
+				break;
+		}
+		document.write(`Це ${result}`)
 	</script>
 </body>
 
