@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 9.</title>
+</head>
+
+<body>
+	<h1>Задача №9.</h1>
+	<h3>Користувач загадує число. Комп’ютер задає питання поки не вгадає число користувача (використати confirm).</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<script>
+		//Крок 0. Позначення велечин
+		//Крок 1. Введення величин
+		//Крок 2.Обчислення
+		let userNumber = parseInt(prompt("Загадайте число від 1 до 5"))
+		while (true) {
+			let randomNumber = Math.floor(Math.random() * 5) + 1
+			let computerNumber = confirm(`Число ${randomNumber} ?`)
+			if (computerNumber) {
+				alert("Компютер вгадав!")
+				break
+			}
+			else {
+				alert("Компютер не вгадав!")
+			}
+		}
+	</script>
+</body>
+
+</html>
