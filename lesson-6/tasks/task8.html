@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 8.</title>
+</head>
+
+<body>
+	<h1>Задача №8.</h1>
+	<h3>Інвестор вклав S тис. грн на 20 років під 20% річних, а потім на 17 років під 27% річних. Визначити за допомогою
+		циклів суму, яку він одержить.</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+
+	<script>
+		//Крок 0. Позначення величин
+		// firstContribution - перший вклад
+		// secondContribution - другий вклад
+		// totalResult - загальний результат
+		//Крок 1. Введення величин та Обчислення
+		let firstContribution = parseInt(prompt("Яку суму вкладите в інвестицію?"))
+		let secondContribution = parseInt(prompt("Яку суму вкладите в інвестицію?"))
+		let totalResult = 0
+		for (let i = 1; i <= 20; i++) {
+			firstContribution = firstContribution * 0.2 + firstContribution
+			document.write(`Перший вклад. Рік ${i} :  ${Math.round(firstContribution)}<br>`)
+		}
+		for (let j = 1; j <= 17; j++) {
+			secondContribution = secondContribution * 0.27 + secondContribution
+			document.write(`Другий вклад. Рік ${j} :  ${Math.round(secondContribution)}<br>`)
+		}
+		totalResult = firstContribution + secondContribution
+		document.write(`Загальна сума: ${Math.round(totalResult)}`)  
+	</script>
+</body>
+
+</html>

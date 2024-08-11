@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 2, 2.1</title>
+</head>
+
+<body>
+	<h1>Задача 2, 2.1</h1>
+	<h3>2. З клавіатури вводитяться числа поки не буде введено 0. Знайти добуток чисел.</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<script>
+		//Крок 0. Позначення велечин
+		//Крок 1. Введення величин та Обчислення
+		let productOfNumbers = 1
+		while (true) {
+			const userNumber = parseInt(prompt("Введіть любе перше число окрім '0'! ('0 - це завершення')"))
+			if (userNumber === 0) {
+				break
+			}
+			productOfNumbers *= userNumber
+		}
+		document.write(`Добуток який вийшов після введеня чисел: ${productOfNumbers}`)
+	</script>
+</body>
+
+</html>

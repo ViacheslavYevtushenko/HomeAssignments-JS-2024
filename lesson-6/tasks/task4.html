@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 4.</title>
+</head>
+
+<body>
+	<h1>Задача №4.</h1>
+	<h3>Відобразити трикутник за допомогою символів «о»</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<img src="../img/4.png" alt="">
+	<br>
+	<script>
+		//Крок 0. Позначення величин
+		//Крок 1. Введення величин та Обчислення
+		for (let i = 12; i >= 0; i--) {
+			for (let j = 0; j < i; j++) {
+				document.write("o")
+			}
+			document.write(`<br>`)
+		}
+
+		document.write(`<h2>4.1. Відобразити трикутник за допомогою символів «о»</h2>`)
+		document.write(`<img src="../img/4_1.png" alt="">`)
+
+		document.write(`<div style="text-align: center; width: 200px;">`)
+		for (let i = 12; i >= 0; i--) {
+			for (let j = 0; j < i; j++) {
+				document.write("o ")
+			}
+			document.write(`<br>`)
+		}
+		document.write(`</div>`)
+	</script>
+</body>
+
+</html>
