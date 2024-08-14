@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 5.</title>
+</head>
+
+<body>
+	<h1>Задача №5.</h1>
+	<h3>Створити окремі функції, які переводять: Сантиметри у дюйми; Кілограми у фунти; Кілометри у милі.
+	</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<script>
+		//Крок 0. Позначення велечин
+		//Крок 1. Введення величин та Обчислення
+
+
+		// 1. Перевод сантиметрів у дюйми
+		let getConvertCentimetersToInches = centimeter => centimeter * 0.39
+		// function getCentimeterInches(centimeter) {
+		// 	return centimeter * 0.39
+		// }
+		let lengthCentimeters = parseFloat(prompt("Скільки сантиметрів перевести у дюйми?", "1"))
+		document.write(`${lengthCentimeters}см = ${getConvertCentimetersToInches(lengthCentimeters)} дюйма <br>`)
+
+
+		// 2. Перевод сантиметрів у дюйми
+		let getConvertKilogramsToPounds = kilograms => kilograms * 0.45
+		// function getKilogramsPounds(kilograms) {
+		// 	return kilograms * 0.45
+		// }
+		let kilogramsNumber = parseFloat(prompt("Скільки кілограмів перевести у фунти?", "1"))
+		document.write(`${kilogramsNumber}кг = ${getConvertKilogramsToPounds(kilogramsNumber)} фунт/ів <br>`)
+
+
+		// 3. Перевод Кілометри  у милі
+		let getConvertKilometersToMiles = kilometrs => kilometrs * 0.62
+		// function getKilometersMiles(kilometrs) {
+		// 	return kilometrs * 0.62
+		// }
+		let lengthKilometrs = parseFloat(prompt("Скільки кілометрів перевести у милі?", "1"))
+		document.write(`${lengthKilometrs}км = ${getConvertKilometersToMiles(lengthKilometrs)} миль`)
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 3.</title>
+</head>
+
+<body>
+	<h1>Задача 3.</h1>
+	<h3>Створити окремі функції, які для 4 чисел знаходять: <br>
+		1.суму;<br>
+		2.добуток;<br>
+		3.середнє арифметичне;<br>
+		4.мінімальне значення.
+	</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<script>
+		//Крок 0. Позначення величин
+		//Крок 1. Введення величин та Обчислення
+		let getSum = (num1 = 0, num2 = 0, num3 = 0, num4 = 0) => num1 + num2 + num3 + num4
+
+		let getMultiplication = function (num1 = 0, num2 = 0, num3 = 0, num4 = 0) {
+			return num1 * num2 * num3 * num4
+		}
+
+		function arithmeticMean(num1 = 0, num2 = 0, num3 = 0, num4 = 0) {
+			return (num1 + num2 + num3 + num4) / 4
+		}
+
+		function minValue(num1 = 0, num2 = 0, num3 = 0, num4 = 0) {
+			let minNumber = num1
+			if (num2 < minNumber)
+				minNumber = num2
+			if (num3 < minNumber)
+				minNumber = num3
+			if (num4 < minNumber)
+				minNumber = num4
+			return minNumber
+		}
+
+
+		let num1 = parseFloat(prompt("Вкажіть число!", "2"))
+		let num2 = parseFloat(prompt("Вкажіть число!", "4"))
+		let num3 = parseFloat(prompt("Вкажіть число!", "6"))
+		let num4 = parseFloat(prompt("Вкажіть число!", "8"))
+
+
+		document.write(`1. Сума дорівнює : ${getSum(num1, num2, num3, num4)} <br>`)
+		document.write(`2. Добуток : ${getMultiplication(num1, num2, num3, num4)} <br>`)
+		document.write(`3. Середнє арифметичне : ${arithmeticMean(num1, num2, num3, num4)} <br>`)
+		document.write(`4. Мінімальне значення : ${minValue(num1, num2, num3, num4)}`)
+
+	</script>
+</body>
+
+</html>

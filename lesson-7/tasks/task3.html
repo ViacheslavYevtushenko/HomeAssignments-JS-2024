@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 2.</title>
+</head>
+
+<body>
+	<h1>Задача №2.</h1>
+	<h3>Створити функцію, яка за номером дня дозволяє з’ясувати чи є цей день робочим.</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<script>
+		//Крок 0. Позначення велечин
+		//Крок 1. Введення величин та Обчислення
+
+		function getWorkingDays(day) {
+			let result
+			switch (day) {
+				case 1:
+				case 2:
+				case 3:
+				case 4:
+				case 5:
+					result = "Робочий"
+					break;
+				case 6:
+				case 7:
+					result = "Вихідний"
+					break
+				default:
+					result = "Такого немає"
+					break;
+			}
+			return result
+		}
+		let dayNumber = parseInt(prompt("Введіть день неділі!"))
+		alert(`${getWorkingDays(dayNumber)}`)
+
+	</script>
+</body>
+
+</html>

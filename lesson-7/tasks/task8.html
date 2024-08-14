@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 7.</title>
+</head>
+
+<body>
+	<h1>Задача №7.</h1>
+	<h3>Створити функцію, яка випадковим чином виводить на екран одне із 4 зображень (шляхи до зображень передаються у
+		функцію)</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<!-- <img src="./img/smile1.png" alt="">
+<img src="./img/smile2.png" alt="">
+<img src="./img/smile3.png" alt="">
+<img src="./img/smile4.png" alt=""> -->
+	<script>
+		//Крок 0. Позначення величин
+		//Крок 1. Введення величин та Обчислення
+
+
+		// Перший варіант з використанням масивів
+		function getImagesRandom() {
+			let images = [`<img src="./img/smile1.png" alt="">`, `<img src="./img/smile2.png" alt="">`, `<img src="./img/smile3.png" alt="">`, `<img src="./img/smile4.png" alt="">`]
+			let imageRandom = images[Math.floor(Math.random() * images.length)]
+			return imageRandom
+		}
+		document.write(`${getImagesRandom()}`)
+
+
+
+		// Другий варіант
+		function imagesRandom(image1, image2, image3, image4) {
+			let imageRandomNumber = Math.floor(Math.random() * 4) + 1
+			let resultImageRandom
+			if (imageRandomNumber === 1)
+				resultImageRandom = image1
+			else if (imageRandomNumber === 2)
+				resultImageRandom = image2
+			else if (imageRandomNumber === 3)
+				resultImageRandom = image3
+			else
+				resultImageRandom = image4
+			document.write(`<img src="./img/${resultImageRandom}" alt="">`)
+		}
+		const imageOne = 'smile1.png'
+		const imageTwo = 'smile2.png'
+		const imageThree = 'smile3.png'
+		const imageFour = 'smile4.png'
+		imagesRandom(imageOne, imageTwo, imageThree, imageFour)
+	</script>
+</body>
+
+</html>

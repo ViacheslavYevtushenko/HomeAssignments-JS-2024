@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 8.</title>
+</head>
+<style>
+	.container {
+		width: 400;
+		height: 400;
+	}
+
+	span {
+		font-size: 24px;
+		font-weight: 600;
+
+	}
+</style>
+
+<body>
+	<h1>Задача №8.</h1>
+	<h3>Створити функцію, яка виводить банер (у функцію передаються: зображення, заголовок та посилання, куди переходимо
+		при кліку на зображення (тег img повине знаходитись у середині тега a: a img src=”шлях” /a</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<!-- <a target="_blank" style="display: grid; text-align: center; width: 800px; align-items: start; "
+		href="https://uk.javascript.info/">
+		<span>Заголовок</і>
+			<img style=" margin-top: 15px;" src=./img/smile1.png alt="">
+	</a> -->
+	<script>
+		//Крок 0. Позначення величин
+		//Крок 1. Введення величин та Обчислення
+		function banner(image, link, title) {
+			document.write(`<a target="_blank" style="display: grid; text-align: center; width: 800px; align-items: start; justify-content: center "
+		href="${link}">
+		<span>${title}</span>
+			<img style=" margin-top: 15px; " src=./img/${image} alt="">
+	</a>`)
+		}
+		const img = 'smile1.png'
+		const link = 'https://uk.javascript.info/'
+		const title = 'Заголовок'
+		banner(img, link, title)
+	</script>
+</body>
+
+</html>

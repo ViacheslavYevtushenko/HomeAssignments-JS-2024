@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 6.</title>
+</head>
+
+<body>
+	<h1>Задача №6.</h1>
+	<h3>Створити функцію, яка створює таблицю з вказаною кількістю рядків і стовпців (таблиця заповнюється заданим
+		фіксованим повідомленням).</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<script>
+		//Крок 0. Позначення величин
+		//Крок 1. Введення величин та Обчислення
+		function table(rowsNum, columnsNum, message) {
+			let table = `<table border="2px">`
+			for (let i = 1; i <= rowsNum; i++) {
+				table += `<tr>`
+				for (let b = 1; b <= columnsNum; b++) {
+					table += `<th>${message}</th>`
+				}
+				table += `</tr>`
+			}
+			table += `</table>`
+			return table
+		}
+		let rowsNum = parseInt(prompt("Кількість рядків", "2"))
+		let columnsNum = parseInt(prompt("Кількість стовбців", "2"))
+		let message = prompt("Повідомлення", "Привіт")
+
+		document.write(`${table(rowsNum, columnsNum, message)}`)
+
+
+	</script>
+</body>
+
+</html>

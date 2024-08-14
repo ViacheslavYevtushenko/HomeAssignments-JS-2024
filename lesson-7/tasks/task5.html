@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 4.</title>
+</head>
+
+<body>
+	<h1>Задача №4.</h1>
+	<h3>Створити функцію, яка для 3 заданих чисел знаходить одночасно декілька результатів: кількість парних, кількість
+		додатних, кількість більших за 100.</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<script>
+		//Крок 0. Позначення велечин
+		//Крок 1. Введення величин та Обчислення
+		function getEvenNumbers(num1, num2, num3) {
+			let evenNumbers = 0
+			let positiveNumbers = 0
+			let moreThanHundred = 0
+
+			if (num1 % 2 === 0)
+				evenNumbers++
+			if (num2 % 2 === 0)
+				evenNumbers++
+			if (num3 % 2 === 0)
+				evenNumbers++
+
+			if (num1 > 0)
+				positiveNumbers++
+			if (num2 > 0)
+				positiveNumbers++
+			if (num3 > 0)
+				positiveNumbers++
+
+			if (num1 > 100)
+				moreThanHundred++
+			if (num2 > 100)
+				moreThanHundred++
+			if (num3 > 100)
+				moreThanHundred++
+			return { evenNumbers, positiveNumbers, moreThanHundred };
+		}
+
+
+		const userNum1 = parseFloat(prompt("Введіть число", "2"))
+		const userNum2 = parseFloat(prompt("Введіть число", "2"))
+		const userNum3 = parseFloat(prompt("Введіть число", "101"))
+
+		let result = getEvenNumbers(userNum1, userNum2, userNum3)
+		document.write(`Кількість парних чисел : ${result.evenNumbers} <br>`)
+		document.write(`Кількість додатних чисел : ${result.positiveNumbers}<br>`)
+		document.write(`Кількість більше 100: ${result.moreThanHundred}`)
+
+
+
+
+		// function getEvenNumbers(num1, num2, num3) {
+		// 	let evenNumbers = 0
+		// 	if (num1 % 2 === 0)
+		// 		evenNumbers++
+		// 	if (num2 % 2 === 0)
+		// 		evenNumbers++
+		// 	if (num3 % 2 === 0)
+		// 		evenNumbers++
+		// 	return evenNumbers
+		// }
+		// function getPositiveNumbers(num1, num2, num3) {
+		// 	let positiveNumbers = 0
+		// 	if (num1 > 0)
+		// 		positiveNumbers++
+		// 	if (num2 > 0)
+		// 		positiveNumbers++
+		// 	if (num3 > 0)
+		// 		positiveNumbers++
+		// 	return positiveNumbers
+		// }
+		// function getMoreThanHundred(num1, num2, num3) {
+		// 	let moreThanHundred = 0
+		// 	if (num1 > 100)
+		// 		moreThanHundred++
+		// 	if (num2 > 100)
+		// 		moreThanHundred++
+		// 	if (num3 > 100)
+		// 		moreThanHundred++
+		// 	return moreThanHundred
+		// }
+		// const userNum1 = parseFloat(prompt("Введіть число", "2"))
+		// const userNum2 = parseFloat(prompt("Введіть число", "2"))
+		// const userNum3 = parseFloat(prompt("Введіть число", "101"))
+		
+		// let resultEvenNumbers = getEvenNumbers(userNum1, userNum2, userNum3)
+		// let resultPositiveNumbers = getPositiveNumbers(userNum1, userNum2, userNum3)
+		// let resultMoreThanHundred = getMoreThanHundred(userNum1, userNum2, userNum3)
+
+		// document.write(`Кількість парних чисел : ${resultEvenNumbers} <br>`)
+		// document.write(`Кількість додатних чисел : ${resultPositiveNumbers}<br>`)
+		// document.write(`Кількість більше 100: ${resultMoreThanHundred}`)
+
+
+
+
+		// function getResultOfQuantity(num1, num2, num3) {
+		// 	let evenNumbers = 0
+		// 	let positiveNumbers = 0
+		// 	let moreThanHundred = 0
+		// 	const resultPositiveNumbers = num1 + num2 + num3
+		// 	const resultEvenNumbers = num1 + num2 + num3
+		// 	const resultMoreThanHundred = num1 + num2 + num3
+		// 	for (let i = 1; i <= 3; i++) {
+		// 		if (resultEvenNumbers % 2 === 0) {
+		// 			evenNumbers++
+		// 		}
+		// 		if (resultPositiveNumbers > 0) {
+		// 			positiveNumbers++
+		// 		}
+		// 		if (resultMoreThanHundred > 100) {
+		// 			moreThanHundred++
+		// 		}
+		// 	}
+		// 	return { evenNumbers, positiveNumbers, moreThanHundred };
+		// }
+		
+	</script>
+</body>
+
+</html>
