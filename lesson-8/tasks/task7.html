@@ -9,13 +9,50 @@
 
 <body>
 	<h1>Задача №7.</h1>
-	<h3></h3>
+	<h3>Дано послідовність платіжок протягом року. Знайти сумарну кількість грошей за:</h3>
+	<ul>
+		<li>за весь рік;</li>
+		<li>у першій половині року;</li>
+		<li>у другій половині року;</li>
+		<li>за літо;</li>
+		<li>за ІІ квартал;</li>
+		<li>за парні місяці (з парними номерами);</li>
+		<li>за місяці, які є початковими у сезоні (весна, літо, осінь, зима).</li>
+	</ul>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення величин
 		//Крок 1. Введення величин та Обчислення
+		function getPaymentAmount(firstPayment, lastPayment, paymentDuringYear, indexStep = 1) {
+			let sum = 0
+			for (let i = firstPayment - 1; i < lastPayment; i += indexStep) {
+				sum += paymentDuringYear[i]
+			}
+			return sum
+		}
+		const paymentDuringYear = [1200, 1300, 1150, 1400, 1250, 1350, 1100, 1350, 1250, 1300, 1150, 1400]
 
-
+		//За весь рік
+		let forWholYear = getPaymentAmount(1, 12, paymentDuringYear)
+		document.write(`За весь рік ${forWholYear} <br>`)
+		//У першій половині року
+		let firstHalfOfYear = getPaymentAmount(1, 6, paymentDuringYear)
+		document.write(`У першій половині року ${firstHalfOfYear}<br>`)
+		//У другій половині року
+		let secondРalfOfYear = getPaymentAmount(7, 12, paymentDuringYear)
+		document.write(`У першій половині року ${secondРalfOfYear}<br>`)
+		//За літо
+		let paymentForSummer = getPaymentAmount(6, 8, paymentDuringYear)
+		document.write(`У першій половині року ${paymentForSummer}<br>`)
+		//за ІІ квартал
+		let forSecondQuarter = getPaymentAmount(3, 5, paymentDuringYear)
+		document.write(`У першій половині року ${forSecondQuarter}<br>`)
+		//За парні місяці
+		let evenMonths = getPaymentAmount(2, 12, paymentDuringYear, 2)
+		document.write(`У першій половині року ${evenMonths}<br>`)
+		//За місяці, які є початковими у сезоні (весна, літо, осінь, зима).
+		let monthsOfSeasons = getPaymentAmount(3, 12, paymentDuringYear, 3)
+		document.write(`У першій половині року ${monthsOfSeasons}<br>`)
 	</script>
 </body>
 

@@ -9,12 +9,38 @@
 
 <body>
 	<h1>Задача №3.</h1>
-	<h3></h3>
+	<h3>Дано масив імен учнів. З’ясувати скільки разів зустрічається ім’я «Іван».</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення велечин
 		//Крок 1. Введення величин та Обчислення
 
+		// Перший варіант з заданими масивом
+		document.write(`<h3>Перший варіант з заданими масивом</h3> <br>`)
+		let namesStudents1 = ['Алла', 'Іван', 'Анна', 'Іван', 'Олександр', 'Микола', 'Іван', 'Андрій', 'Іван']
+		let quantity1 = 0
+		for (let i = 0; i < namesStudents1.length; i++) {
+			if (namesStudents1[i] === "Іван")
+				quantity1++
+		}
+		document.write(`Кількість учнів з іменем Іван: ${quantity1}<br>`)
+
+		// Другий варіант з Функцією та масивом з додаванням кількості учнів
+		document.write(`<h3>Другий варіант з Функцією та масивом, а також з додаванням кількості учнів</h3> <br>`)
+		function getNumberNamesIvan(studentsNumber2) {
+			let namesStudents2 = []
+			let quantity2 = 0
+			for (let i = 0; i < studentsNumber2; i++) {
+				const names = prompt("Введіть імена учнів! Має бути декілька учнів з іменем 'Іван'",)
+				namesStudents2.push(names)
+				if (namesStudents2[i] === "Іван" || namesStudents2[i] === "іван")
+					quantity2++
+			}
+			return quantity2
+		}
+		const studentsNumber2 = parseInt(prompt('Введіть кількість учнів', '5'))
+		let numberOfIvansNames = getNumberNamesIvan(studentsNumber2)
+		document.write(`Кількість учнів з іменем Іван: ${numberOfIvansNames}`)
 	</script>
 </body>
 

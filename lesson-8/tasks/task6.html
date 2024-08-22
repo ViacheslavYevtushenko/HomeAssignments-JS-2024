@@ -9,12 +9,28 @@
 
 <body>
 	<h1>Задача №6.</h1>
-	<h3></h3>
+	<h3>Дано послідовність цін товарів та назв (у окремих масивах). Вивести на екран ті, які може собі дозволити
+		користувач (кількість грошей задається).</h3>
+	<img src="./img/image.png" alt="">
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення велечин
 		//Крок 1. Введення величин та Обчислення
 
+		function getProductThatAreAllowedBuy(productPrice, productTitles, userMoney) {
+			let availableProducts = []
+			for (let i = 0; i < productPrice.length; i++) {
+				if (productPrice[i] <= userMoney) {
+					availableProducts.push(productTitles[i])
+				}
+			}
+			return availableProducts
+		}
+		let productPrice = [1000, 20, 31, 55, 38, 150]
+		let productTitles = ['cheese', 'juice', 'bread', 'chips', 'milk', 'burger']
+		let userMoney = parseFloat(prompt('Ведіть вашу кількість грошей!'))
+		let possibleBuy = getProductThatAreAllowedBuy(productPrice, productTitles, userMoney)
+		document.write(`Ви можете собі дозволити купити: ${possibleBuy}`)
 
 	</script>
 </body>

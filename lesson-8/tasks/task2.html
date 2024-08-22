@@ -9,11 +9,107 @@
 
 <body>
 	<h1>Задача 2.</h1>
-	<h3></h3>
+	<h3>Дано масив, який зберігає кількість відвідувачів магазину протягом тижня. Вивести на екран:</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<ul>
+		<li>номери днів, протягом яких кількість відвідувачів була меншою за 20;</li>
+		<li>номери днів, коли кількість відвідувачів була мінімальною;</li>
+		<li>номери днів, коли кількість відвідувачів була максимальною;</li>
+		<li>загальну кількість клієнтів у робочі дні та окремо загальну кількість днів на вихідних.</li>
+	</ul>
 	<script>
 		//Крок 0. Позначення велечин
 		//Крок 1. Введення величин та Обчислення
+		// const numberVisitorsToStore = [22, 33, 67, 12, 10, 50, 101]
+		// let numberDaylessThanTwentyVisitors = []
+		// let numberCustomersWorkingDays = 0
+		// let numberCustomersWeekendsDays = 0
+		// for (let i = 0; i < numberVisitorsToStore.length; i++) {
+		// 	if (numberVisitorsToStore[i] < 20)
+		// 		numberDaylessThanTwentyVisitors.push(i + 1)
+		// }
+		// document.write(`Номери днів, протягом яких кількість відвідувачів була меншою за 20:  ${numberDaylessThanTwentyVisitors} <br>`)
+
+		// let numberDayMinVisitors = Math.min(...numberVisitorsToStore)
+		// numberDayMinVisitors = numberVisitorsToStore.indexOf(numberDayMinVisitors) + 1
+		// document.write(`Номери днів, протягом яких кількість відвідувачів була меншою за 20:  ${numberDayMinVisitors}<br>`)
+
+		// let numberDayMaxVisitors = Math.max(...numberVisitorsToStore)
+		// numberDayMaxVisitors = numberVisitorsToStore.indexOf(numberDayMaxVisitors) + 1
+		// document.write(`Номери днів, протягом яких кількість відвідувачів була меншою за 20:  ${numberDayMaxVisitors}<br>`)
+
+		// for (let i = 0; i < 5; i++) {
+		// 	numberCustomersWorkingDays += numberVisitorsToStore[i]
+		// }
+		// document.write(`Загальну кількість клієнтів у робочі дні: ${numberCustomersWorkingDays}<br>`)
+
+		// for (let i = 5; i < 7; i++) {
+		// 	numberCustomersWeekendsDays += numberVisitorsToStore[i]
+		// }
+		// document.write(`Загальну кількість клієнтів на вихідні дні: ${numberCustomersWeekendsDays}<br>`)
+
+
+
+		// Варіант з Функціями
+		function getNumberVisitorsToStoreDuringTheWeek(days) {
+			let numberClientsByDay = []
+			for (let i = 0; i < days; i++) {
+				let numberVisitorsToStore = parseInt(prompt(`Кількість відвідувачів за ${i + 1}-ий день `))
+				numberClientsByDay.push(numberVisitorsToStore)
+			}
+			return numberClientsByDay
+		}
+		// Дні в яких клієнтів було меньше 20
+		function getNumberDaylessThanTwentyVisitors(numDay) {
+			let lessThanTwentyVisitors = []
+			for (let i = 0; i < numDay.length; i++) {
+				if (numDay[i] < 20)
+					lessThanTwentyVisitors.push(i + 1)
+			}
+			return lessThanTwentyVisitors
+		}
+		// День в який було найменьшн клієнтів
+		function getDayWithTheLeastNumbeOfCustomers(numberVisitorsToStore2) {
+			let numberDayMinVisitors = Math.min(...numberVisitorsToStore2)
+			numberDayMinVisitors = numberVisitorsToStore2.indexOf(numberDayMinVisitors) + 1
+			return numberDayMinVisitors
+		}
+		// День в який було найбільше клієнтів
+		function getDayWithTheMostCustomers() {
+			let numberDayMaxVisitors = Math.max(...numberVisitorsToStore2)
+			numberDayMaxVisitors = numberVisitorsToStore2.indexOf(numberDayMaxVisitors) + 1
+			return numberDayMaxVisitors
+		}
+		// Загальну кількість клієнтів у робочі дні
+		function getTotalNumberOfCustomersOnWorkingDays(daysWorking) {
+			let numberCustomersWorkingDays = 0
+			for (let i = 0; i < daysWorking; i++) {
+				numberCustomersWorkingDays += numberVisitorsToStore2[i]
+			}
+			return numberCustomersWorkingDays
+		}
+		// Загальну кількість клієнтів на вихідні дні
+		function getTotalNumberOfCustomersOnWeekends(dasyWeekends) {
+			let numberCustomersWeekendsDays = 0
+
+			for (let i = 5; i < dasyWeekends; i++) {
+				numberCustomersWeekendsDays += numberVisitorsToStore2[i]
+			}
+			return numberCustomersWeekendsDays
+		}
+
+		let numberVisitorsToStore2 = getNumberVisitorsToStoreDuringTheWeek(7)
+		let daysLessThanTwentyVisitors = getNumberDaylessThanTwentyVisitors(numberVisitorsToStore2)
+		let numberDayMinVisitors = getDayWithTheLeastNumbeOfCustomers(numberVisitorsToStore2)
+		let numberDayMaxVisitors = getDayWithTheMostCustomers()
+		let numberCustomersWorkingDays = getTotalNumberOfCustomersOnWorkingDays(5)
+		let numberCustomersWeekendsDays = getTotalNumberOfCustomersOnWeekends(7)
+		document.write(`Кількість відвідувачів магазину протягом тижня по днях: ${numberVisitorsToStore2}<br>`)
+		document.write(`Номери днів, протягом яких кількість відвідувачів була меншою за 20:  ${daysLessThanTwentyVisitors} <br>`)
+		document.write(`Номери днів, протягом яких кількість відвідувачів була мінімальна:  ${numberDayMinVisitors}<br>`)
+		document.write(`Номери днів, протягом яких кількість відвідувачів була максимальною:  ${numberDayMaxVisitors}<br>`)
+		document.write(`Загальну кількість клієнтів у робочі дні: ${numberCustomersWorkingDays}<br>`)
+		document.write(`Загальну кількість клієнтів на вихідні дні: ${numberCustomersWeekendsDays}<br>`)
 	</script>
 </body>
 

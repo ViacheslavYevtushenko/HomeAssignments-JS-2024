@@ -9,11 +9,77 @@
 
 <body>
 	<h1>Задача №4.</h1>
-	<h3></h3>
+	<h3>Дано послідовність номерів автомобілів. Підрахувати кількість номерів, які </h3>
+	<ul>
+		<li>починаються на букву «А»;</li>
+		<li>перша і остання літери співпадають;</li>
+		<li>складаються з більше ніш 5 символів</li>
+	</ul>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення величин
 		//Крок 1. Введення величин та Обчислення
+		//#1 Номера автомобілів
+		function getTheNumberOfCarNumbers(numberOfCarNumbers) {
+			let numbers = []
+			for (let i = 0; i < numberOfCarNumbers; i++) {
+				let nameNumberCar = prompt("Введіть номера автомобілів", "AI5510KA")
+				numbers.push(nameNumberCar)
+			}
+			return numbers
+		}
+
+		//#2 Номера які починаются на А
+		function getNumbersForTheFirstA(carNumbers, numbersFirstLetterA) {
+			let quantityA = 0
+			for (let i = 0; i < carNumbers.length; i++) {
+				if (carNumbers[i].charAt(0) === numbersFirstLetterA) {
+					quantityA++
+				}
+			}
+			return quantityA
+		}
+
+		//#3 Номера на першу та останню літеру А 
+		function getNumbersForTheFirstAndLastA(carNumbers, numFirstAndLastletterA) {
+			let quantityAA = 0
+			for (let i = 0; i < carNumbers.length; i++) {
+				if (carNumbers[i].charAt(0) === numFirstAndLastletterA && carNumbers[i].charAt(7) === numFirstAndLastletterA) {
+					quantityAA++
+				}
+			}
+			return quantityAA
+		}
+
+		//#4 Номера з більше кількістю символів ніш 5
+		function getNumsWithMoreFiveCharacters(carNumbers) {
+			let numMoreFive = 0
+			for (let i = 0; i < carNumbers.length; i++) {
+				if (carNumbers[i].length > 5)
+					numMoreFive++
+			}
+			return numMoreFive
+		}
+
+
+		//Кількість номерів авто
+		let numberOfCarNumbers = parseInt(prompt("Кількість номерів", '5'))
+
+		//#1 Номера автомобілів
+		let carNumbers = getTheNumberOfCarNumbers(numberOfCarNumbers)
+		document.write(`Номера автомобілів: ${carNumbers}<br>`)
+		//#2 Номера на першу літеру А
+		let numbersFirstLetterA = getNumbersForTheFirstA(carNumbers, "A")
+		document.write(`Кількість номерів на першу літеру А: ${numbersFirstLetterA}<br>`)
+
+		//#3 Номера на першу та останню літеру А 
+		let numbersFirstAndLastLetterA = getNumbersForTheFirstAndLastA(carNumbers, "A")
+		document.write(`Кількість номерів що співпадають на першу та останню літеру А : ${numbersFirstAndLastLetterA}<br>`)
+
+
+		//#4 Номера з більше кількістю символів ніш 5
+		let moreThanFiveCharacters = getNumsWithMoreFiveCharacters(carNumbers)
+		document.write(`Номера з кількістю більше пяти символів : ${moreThanFiveCharacters}`)
 
 	</script>
 </body>

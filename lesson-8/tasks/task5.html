@@ -9,11 +9,54 @@
 
 <body>
 	<h1>Задача №5.</h1>
-	<h3></h3>
+	<h3>Дано послідовність оцінок учня. Підрахувати кількість:</h3>
+	<ol>
+		<li>двійок</li>
+		<li>кількість хороших оцінок (добре, відмінно);</li>
+		<li>кількість оцінок, які нижче середнього.</li>
+	</ol>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення велечин
 		//Крок 1. Введення величин та Обчислення
+		//#1 Кількість двійок
+		function getNumberOfTwos(studentEvaluations, numberTwos) {
+			for (let i = 0; i < studentEvaluations.length; i++) {
+				if (studentEvaluations[i] === 2) {
+					numberTwos++
+				}
+			}
+			return numberTwos
+		}
+
+		//#2 Кількість хороших оцінок (добре, відмінно)
+		function getnumberOfGoodGrades(studentEvaluations, numberGoodGrades) {
+			for (let i = 0; i < studentEvaluations.length; i++) {
+				if (studentEvaluations[i] >= 3) {
+					numberGoodGrades++
+				}
+			}
+			return numberGoodGrades
+		}
+
+		//#3 Кількість оцінок, які нижче середнього
+		function getNumberOfGradesThatAreBelowAverage(studentEvaluations, belowAverage) {
+			for (let i = 0; i < studentEvaluations.length; i++) {
+				if (studentEvaluations[i] < 3) {
+					belowAverage++
+				}
+			}
+			return belowAverage
+		}
+
+		const studentEvaluations = [1, 2, 3, 5, 5, 3, 4, 3, 2]
+
+		let numberTwos = getNumberOfTwos(studentEvaluations, 0)
+		let numberGoodGrades = getnumberOfGoodGrades(studentEvaluations, 0)
+		let numberBelowAverage = getNumberOfGradesThatAreBelowAverage(studentEvaluations, 0)
+		document.write(`Кількість двійок: ${numberTwos}<br>`)
+		document.write(`Кількість хороших оцінок (добре, відмінно): ${numberGoodGrades}<br>`)
+		document.write(`Кількість оцінок, які нижче середнього: ${numberBelowAverage}`)
 
 
 	</script>
