@@ -9,13 +9,31 @@
 
 <body>
 	<h1>Задача №8.</h1>
-	<h3></h3>
+	<h3>Дано одновимірний масив, у якому зберігається певна виграшна сума (елементи заповнюються випадковим чином
+		значеннями від -500 до 500). Надаючи користувачу можливість вибирати номери елементів (поки він не відмовиться).
+		Знаходити сумарний виграш.</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 
 	<script>
 		//Крок 0. Позначення величин
 		//Крок 1. Введення величин та Обчислення
-
+		let sum = []
+		let startGame = true
+		let totalSum = 0
+		while (startGame) {
+			let numRandom = -500 + Math.floor(Math.random() * (500 - -500 + 1))
+			let userSum = confirm(`Сума: ${numRandom}. Продовжуємо?`)
+			if (userSum === true) {
+				sum.push(numRandom)
+			}
+			else if (userSum === false)
+				break
+		}
+		for (let i = 0; i < sum.length; i++) {
+			totalSum += sum[i]
+		}
+		document.write(`Сума грошей які випадали: ${sum}<br>`)
+		document.write(`Загальна сума: ${totalSum}`)
 
 	</script>
 </body>
