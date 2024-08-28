@@ -9,11 +9,18 @@
 
 <body>
 	<h1>Задача 2.</h1>
-	<h3></h3>
+	<h3>Користувач вводить кількість елементів. Створити масив, у якому перша половина заповнена 1-цями, а друга
+		заповнена 7-ками.</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення велечин
 		//Крок 1. Введення величин та Обчислення
+		const userNumElements = parseInt(prompt(`Введіть кількість елементів`, '6'))
+		let array = new Array(userNumElements)
+		let roundingAndDivision = Math.ceil(userNumElements / 2)
+		array.fill(1, 0, roundingAndDivision)
+		array.fill(7, roundingAndDivision)
+		document.write(`${array}`)
 	</script>
 </body>
 

@@ -9,12 +9,20 @@
 
 <body>
 	<h1>Задача №3.</h1>
-	<h3></h3>
+	<h3>Користувач вводить кількість елементів. Створити масив, у якому перші 5 елементів заповнені 1-цями, а інші до
+		кінця масиву заповнені 7-ками.</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення велечин
 		//Крок 1. Введення величин та Обчислення
-
+		const userNumElements = parseInt(prompt('Введіть кількість елементів', '9'))
+		let array = new Array(userNumElements).fill(1)
+		array.fill(7, 5)
+		document.write(`Перший варіант ${array} <br>`)
+		//-------------
+		let array1 = new Array(userNumElements).fill(1, 0, 5)
+		array1.fill(7, 5)
+		document.write(`Другий варіант ${array1}`)
 	</script>
 </body>
 

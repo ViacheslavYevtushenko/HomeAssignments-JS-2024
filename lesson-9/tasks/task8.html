@@ -9,14 +9,15 @@
 
 <body>
 	<h1>Задача №8.</h1>
-	<h3></h3>
+	<h3>Дано масив номерів авто. Сформувати новий масив тих, які починаються на «А»</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 
 	<script>
 		//Крок 0. Позначення величин
 		//Крок 1. Введення величин та Обчислення
-
-
+		const numberAuto = ["AA2344ET", "BA2674CE", "BO4544CI", "AA9234EE", "BH8944BM", "AA2353AX", "CE2434BA", "AA2154AX",]
+		const newNumberAuto = numberAuto.filter((numberCar) => numberCar[0] === "A")
+		document.write(`Номера Авто ${numberAuto}.<br> За допомогою .Filter - ${newNumberAuto.join(" | ")} <br>`)
 	</script>
 </body>
 

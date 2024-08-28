@@ -9,13 +9,18 @@
 
 <body>
 	<h1>Задача №5.</h1>
-	<h3></h3>
+	<h3>Дано масив елементів. Знайти добуток додатніх елементів</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення велечин
 		//Крок 1. Введення величин та Обчислення
-
-
+		const array = [-1, 5, -33, 20, -100, -55, 20, 10, 11, -3, 100]
+		let sum = 0
+		for (const elements of array) {
+			if (elements > 0)
+				document.write(` ${elements * 2}`)
+		}
+		// document.write(`До${sum}`)
 	</script>
 </body>
 

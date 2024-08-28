@@ -9,12 +9,19 @@
 
 <body>
 	<h1>Задача №9.</h1>
-	<h3></h3>
+	<h3>Дано масив імен. Сформувати масив з перших літер цих імен.</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення величин
 		//Крок 1. Введення величин та Обчислення
-
+		const name = ["Вячеслав", "Ярослав", "Чингиз", "Едуард", "Святослав", "Людмила", "Анна", "Володимир"]
+		const newArrayName = name.map(el => el[0])
+		// document.write(`${newArrayName}<br>`)
+		// document.write(`${newArrayName.join("")}`)
+		function showName(newArrayName) {
+			document.write(`${newArrayName} <br> ${newArrayName.join("")}`)
+		}
+		let newName = showName(newArrayName)
 	</script>
 </body>
 

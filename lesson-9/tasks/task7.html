@@ -9,12 +9,59 @@
 
 <body>
 	<h1>Задача №7.</h1>
-	<h3></h3>
+	<h3>Дано масив цін. Змінити цей масив так, що на ціни товарів, які більші за 1000 грн. дати 30% знижки.</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення величин
 		//Крок 1. Введення величин та Обчислення
+		function showNewPrice(newPrice) {
+			document.write(`Нові ціни `)
+			for (const item of newPrice) {
+				document.write(`${item.toFixed(2)} `)
+			}
+		}
 
+		document.write(`---------------- .forEach <br>`)
+
+
+		const arrayPrices = [150, 1001, 250, 2499, 13000, 3000, 25, 500, 999, 101, 1111]
+		const discount = 0.3
+		let discountAmount = 0
+
+		document.write(`Старі ціни ${arrayPrices}<br>`)
+
+		arrayPrices.forEach(
+			(element, ind, arr) => {
+				if (element > 1000)
+					discountAmount = element * discount
+				if (element > 1000)
+					arr[ind] -= discountAmount
+			})
+		// document.write(`Нові ціни ${arrayPrices.join("   ")}<br>`)
+
+		showNewPrice(arrayPrices)
+
+
+		document.write(`<br>---------------- .Map з радномними елементами масивів <br>`)
+
+		const userNumElem = () => parseInt(prompt('Введіть кількість елементів', '8'))
+		const randomPrices = (min = 500, max = 1400) => min + Math.floor(Math.random() * (max - min + 1))
+
+		function randomNumElem(userNumElem) {
+			const pricesList = []
+			for (let i = 0; i < userNumElem; i++) {
+				pricesList.push(randomPrices())
+			}
+			return pricesList
+		}
+		const priceList = randomNumElem(userNumElem())
+		let priceList1 = priceList.map((el) => (el > 1000 ? el * 0.7 : el))
+
+		document.write(`Старі ціни ${priceList}<br>`)
+		// document.write(`Нові ціни ${priceList1.join(" | ")} <br>`)
+
+
+		showNewPrice(priceList1)
 
 	</script>
 </body>

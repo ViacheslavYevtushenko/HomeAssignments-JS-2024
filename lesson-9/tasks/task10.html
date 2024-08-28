@@ -9,12 +9,20 @@
 
 <body>
 	<h1>Задача №10.</h1>
-	<h3></h3>
+	<h3>Дано масив цін у грн. Податок складає 20%. Сформувати масив, який буде містити величину сплаченого податку у грн.
+	</h3>
 	<h4><a href="../index.html">На попередню сторінку</a></h4>
 	<script>
 		//Крок 0. Позначення велечин
 		//Крок 1. Введення величин та Обчислення
-
+		const prices = [1000, 2000, 3000, 100, 200, 300]
+		const tax = 0.2
+		const amountWithTax = prices.map(element => element * tax)
+		const priceWithTax = amountWithTax.map((element, i) => element + prices[i])
+		function showResult() {
+			document.write(`Ціна ${prices} <br> Податок від цін ${amountWithTax} <br> Ціна разом з податком ${priceWithTax}`)
+		}
+		let result = showResult()
 	</script>
 </body>
 
