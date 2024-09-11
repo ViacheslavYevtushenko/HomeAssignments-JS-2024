@@ -95,13 +95,13 @@
 		let sumPriceMore1000 = newPriceListMore1000.reduce((prevValue, el) => prevValue + el)
 		document.write(`9. Сума цін, що більше за 1000: ${sumPriceMore1000}<br>`)
 		// 10.Знайти першу ціну, що більше за 1000
-		let firstPrice1000 = newPriceListMore1000.find((el) => el > 1000)
+		let firstPrice1000 = priceList.find((el) => el > 1000)
 		document.write(`10. Перша ціна, що більше за 1000: ${firstPrice1000}<br>`)
 		// 11.Знайти індекс першої ціни, що більше за 1000
 		let indFirstPriceMore1000 = priceList.findIndex((el) => el > 1000)
 		document.write(`11. Індекс першої ціни, що більше за 1000: ${indFirstPriceMore1000}<br>`)
 		// 12.Знайти останню ціну, що більше за 1000
-		let lastPriceMore1000 = newPriceListMore1000.findLast((el) => el > 1000)
+		let lastPriceMore1000 = priceList.findLast((el) => el > 1000)
 		document.write(`12. Остання ціна, що більше за 1000: ${lastPriceMore1000}<br>`)
 		// 13.Знайти індекс останньої ціни, що більше за 1000
 		let indLastPriceMore1000 = priceList.findLastIndex((el) => el > 1000)
