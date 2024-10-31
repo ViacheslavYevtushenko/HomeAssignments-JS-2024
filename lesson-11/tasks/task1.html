@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Задача 1.</title>
+</head>
+
+<body>
+	<h1>Задача 1.</h1>
+	<h3>Знайти суми елементів у вказаній області (зафарбована область охоплює відповідну половину рядків і стовпців)</h3>
+	<h4><a href="../index.html">На попередню сторінку</a></h4>
+	<script>
+		//Крок 0. Позначення велечин
+		//Крок 1. Введення величин та Обчислення
+		// function getRandomArr1(num1, num2) {
+		// 	let newArr = []
+		// 	for (let i = 0; i < num1; i++) {
+		// 		newArr[i] = []
+		// 		for (let j = 0; j < num2; j++) {
+		// 			newArr[i][j] = Math.floor(Math.random() * 10) + 1
+		// 		}
+		// 	}
+		// 	return newArr
+		// }
+		// console.log(randomArr1(6, 6))
+
+		function getRandomArr2(num1, num2) {
+			let newArr = []
+			for (let i = 0; i < num1; i++) {
+				let row = []
+				for (let j = 0; j < num2; j++) {
+					let randomNumber = Math.floor(Math.random() * 10) + 1
+					row.push(randomNumber)
+				}
+				newArr.push(row)
+			}
+			return newArr
+		}
+		console.log(getRandomArr2(6, 6))
+		// let table = [
+		// 	[1, 2, 3, 4, 5, 6],
+		// 	[7, 8, 9, 1, 2, 3],
+		// 	[4, 5, 100, 7, 8, 101],
+		// 	[1, 2, 3, 4, 5, 6],
+		// 	[7, 8, 9, 1, 2, 3],
+		// 	[4, 5, 102, 7, 8, 110]
+		// ]
+		let table = getRandomArr2(6, 6)
+
+		// Половини рядків і стовбців
+		const halfRows = Math.floor(table.length / 2)
+		const halfCollums = Math.floor(table[0].length / 2)
+
+		//1) номери рядків від 0 до половини, стовпці від 0 до половини
+		function getTopLeftArea(halfRows, halfCollums) {
+			let sum = 0
+			for (let rowNum = 0; rowNum < halfRows; rowNum++) {
+				for (let collumnNum = 0; collumnNum < halfCollums; collumnNum++) {
+					sum += table[rowNum][collumnNum]
+				}
+			}
+			return sum
+		}
+		document.write(`1) Номери рядків від 0 до половини, стовпці від 0 до половини.<br> Сума елементів: ${getTopLeftArea(halfRows, halfCollums)}<br>`)
+
+		//2) номери рядків від 0 до половини, стовпці від половини до кінця
+		function getTopRightArea(halfRows, halfCollums) {
+			let sum = 0
+			for (let rowNum = 0; rowNum < halfRows; rowNum++) {
+				for (let collumnNum = halfCollums; collumnNum < table[rowNum].length; collumnNum++) {
+					sum += table[rowNum][collumnNum]
+				}
+			}
+			return sum
+		}
+		document.write(`2) Номери рядків від 0 до половини, стовпці від половини до кінця. <br> Сума елементів: ${getTopRightArea(halfRows, halfCollums)}<br>`)
+
+		// 3) номери рядків (від половини до кінця, стовпці від 0 до половини
+		function getBottomLeftArea(halfRows, halfCollums) {
+			let sum = 0
+			for (let rowNum = halfRows; rowNum < table.length; rowNum++) {
+				for (let collumnNum = 0; collumnNum < halfCollums; collumnNum++) {
+					sum += table[rowNum][collumnNum]
+				}
+			}
+			return sum
+		}
+		document.write(`3) Номери рядків від половини до кінця, стовпці від 0 до половини. <br> Сума елементів: ${getBottomLeftArea(halfRows, halfCollums)}<br>`)
+
+		// 4) номери рядків від половини до кінця , стовпці від половини до кінця
+		function getBottomRightArea(halfRows, halfCollums) {
+			let sum = 0
+			for (let rowNum = halfRows; rowNum < table.length; rowNum++) {
+				for (let collumnNum = halfCollums; collumnNum < table[rowNum].length; collumnNum++) {
+					sum += table[rowNum][collumnNum]
+				}
+			}
+			return sum
+		}
+		document.write(`4) Номери рядків від половини до кінця , стовпці від половини до кінця. <br> Сума елементів: ${getBottomRightArea(halfRows, halfCollums)}<br>`)
+
+		// 5) Суму парних рядків
+		function getSumOfEvenRows() {
+			let sumOfEvenRows = 0
+			for (let rowNum = 0; rowNum < table.length; rowNum += 2) {
+				for (let collumnNum = 0; collumnNum < table[rowNum].length; collumnNum++) {
+					sumOfEvenRows += table[rowNum][collumnNum]
+				}
+			}
+			return sumOfEvenRows
+		}
+		document.write(`5) Сумa парних рядків: ${getSumOfEvenRows()}<br>`)
+
+		// 6) Суму непарних стовпців
+		function getSumOfOddCollumn() {
+			let sumOfOddCollumn = 0
+			for (let rowNum = 0; rowNum < table.length; rowNum++) {
+				for (let collumnNum = 1; collumnNum < table[rowNum].length; collumnNum += 2) {
+					sumOfOddCollumn += table[rowNum][collumnNum]
+				}
+			}
+			return sumOfOddCollumn
+		}
+
+		document.write(`6) Сумa непарних стовпців: ${getSumOfOddCollumn()}<br>`)
+		// 7) У парних рядках – непарні стовпці, у непарних – парні
+		function getOddAndEvenSum() {
+			let sum = 0
+			for (let rowNum = 0; rowNum < table.length; rowNum++) {
+				for (let collumnNum = 1 - rowNum % 2; collumnNum < table[rowNum].length; collumnNum += 2) {
+					// if (rowNum % 2 === 0 && collumnNum % 2 === 1) {
+					// 	sum += table[rowNum][collumnNum]
+					// } else if (rowNum % 2 === 1 && collumnNum % 2 === 0) {
+					// 	sum += table[rowNum][collumnNum]
+					// }
+					sum += table[rowNum][collumnNum]
+				}
+			}
+			return sum
+		}
+
+		document.write(`7) У парних рядках – непарні стовпці, у непарних – парні. Сума: ${getOddAndEvenSum()}<br>`)
+
+	</script>
+</body>
+
+</html>
